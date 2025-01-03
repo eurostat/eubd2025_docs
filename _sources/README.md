@@ -1,4 +1,4 @@
-# Documentation of the 2025 EU Big Data hackathon infrastructure 
+# 2025 EU Big Data hackathon infrastructure 
 
 The 2025 EU Big Data hackathon IT infrastructure has 2 main parts:
 
