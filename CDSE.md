@@ -12,8 +12,12 @@ In the CDSE the hackathon participants can use:
  - [APIs](https://dataspace.copernicus.eu/analyse/apis)
 
 
-There are several sample notebooks how to use the CDSE services. They are available here: [https://github.com/eu-cdse/notebook-samples/](https://github.com/eu-cdse/notebook-samples/).
-Here are the links to the ones showcased during the platform webinar:
+Here are the links to the Jupyter notebooks showcased during the platform webinar:
 
- - [Data access]()
- - [Data visualisation]()
+ - [SentinelHub data access](cdse-notebooks/sentinelhub-data-access.ipynb)
+ - [SentinelHub data visualisation](cdse-notebooks/sentinelhub-data-visualisation.ipynb)
+ - [OpenEO data processing](cdse-notebooks/openeo-example.ipynb)  
+
+There are many other notebooks with examples how to use the CDSE services. They are available here: 
+ - [https://github.com/eu-cdse/notebook-samples/](https://github.com/eu-cdse/notebook-samples/)
+ - [https://github.com/Open-EO/openeo-community-examples/tree/main/python](https://github.com/Open-EO/openeo-community-examples/tree/main/python).
