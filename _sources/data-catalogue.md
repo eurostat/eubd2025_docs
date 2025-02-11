@@ -29,17 +29,15 @@ Earth Observation Data show substantial potential for producing new, more timely
 To be used for official statistics purposes, Earth Observation data require preprocessing along the value-added chain as presented in the diagramme and table below. All hackathon teams need to closely reflect on what Earth Observation Data inputs available at the CDSE they will be working on and what statistics production stage(s) their application needs to address, taking into consideration the data challenge, event’s time constraints and resources capacity limits.
 
 
-```{figure} img/dc-slide1.png
+```{image} img/dc-slide1.png
 ---
-:alt: eo data to statistics
 :align: center
 ---
 From EO data to statistics
 ```
 
-```{figure} img/dc-slide2.png
+```{imagemm} img/dc-slide2.png
 ---
-:alt: eo processing
 :align: center
 ---
 EO data processing steps
