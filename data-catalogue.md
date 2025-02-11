@@ -29,21 +29,8 @@ Earth Observation Data show substantial potential for producing new, more timely
 To be used for official statistics purposes, Earth Observation data require preprocessing along the value-added chain as presented in the diagramme and table below. All hackathon teams need to closely reflect on what Earth Observation Data inputs available at the CDSE they will be working on and what statistics production stage(s) their application needs to address, taking into consideration the data challenge, event’s time constraints and resources capacity limits.
 
 
-```{image} img/dc-slide1.png
----
-:align: center
----
-From EO data to statistics
-```
-
-```{imagemm} img/dc-slide2.png
----
-:align: center
----
-EO data processing steps
-```
-
-
+![Slide1](img/dc-slide1.png)
+![Slide2](img/dc-slide2.png)
 
 ## 2: Earth Observation Data Available at the Copernicus Data Space Ecosystem (CDSE) – Hackathon primary datasets
 
@@ -163,9 +150,9 @@ You can either:
 -	upload the data for your hackathon teams project onto the hackathon customised data platform through the S3 cloud bucket during the event, also respecting the relevant file size and format requirements. For raster data, you can [ingest them to Sentinel Hub](https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Byoc.html) in order to use them programmatically, similarly as Sentinel, Global Land Cover, etc. 
 
 
-::::{Important for your hackathon project success}
+:::{Important}
 Own datasets used in your hacking work should have (close) equivalents in other EU countries so that the project could be replicable at the EU level
-::::
+:::
 
 ## 5: How to set up a CDSE account?
 
