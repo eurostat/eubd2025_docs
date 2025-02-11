@@ -117,7 +117,7 @@ The collection consists in three main type of products: built-up (GHS-BUILT), po
 For more information, see: [https://data.jrc.ec.europa.eu/collection/ghsl](https://data.jrc.ec.europa.eu/collection/ghsl);  project home page: [http://ghsl.jrc.ec.europa.eu/](http://ghsl.jrc.ec.europa.eu/); SciHub page: [https://ec.europa.eu/jrc/en/scientific-tool/global-human-settlement-layer?search](https://ec.europa.eu/jrc/en/scientific-tool/global-human-settlement-layer?search)
 
 :::{Note}
-Here is a sample code how to access and use the GHS data in the platform: [GHS notebook](cf-notebooks/Example_GHSL.ipynb.ipynb).
+Here is a sample code how to access and use the GHS data in the platform: [GHS notebook](cf-notebooks/Example_GHSL.ipynb).
 :::
 
  -	**Land cover (CORINE or ESA WorldCover)**

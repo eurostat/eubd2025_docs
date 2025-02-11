@@ -22,10 +22,14 @@ import urllib3
 
 import folium
 import geopandas as gpd
+import pandas as pd
+import pyarrow.parquet as pq
 import rasterio
 from rasterio.plot import show
 import numpy as np
 from matplotlib import pyplot
+from shapely import wkb
+import contextily as cx
 
 import tempfile
 ------------------
