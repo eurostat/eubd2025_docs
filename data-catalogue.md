@@ -57,7 +57,7 @@ For operational needs of the Copernicus programme, several Sentinel satellites h
 
 :::{Note}
 You will find several Jupyter Notebook examples on how to extract information from these data collections here:
-https://documentation.dataspace.copernicus.eu/Usecase.html 
+[https://documentation.dataspace.copernicus.eu/Usecase.html](https://documentation.dataspace.copernicus.eu/Usecase.html) 
 :::
 
 
@@ -173,6 +173,6 @@ For more information, see also: [https://dataspace.copernicus.eu/news/2024-12-9-
 
 ## 6: Link to the hackathon platform documentation with sample codes for data access and processing 
 
-The resources available during the hackathon is described in this repository under the following link:
+The computational resources available during the hackathon is described in this repository under the following link:
 
 **[https://eurostat.github.io/eubd2025_docs/](https://eurostat.github.io/eubd2025_docs/)** 

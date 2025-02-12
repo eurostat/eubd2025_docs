@@ -8,14 +8,24 @@ On the [Horizon Dashboard](https://horizon.cloudferro.com/) the participants hav
 
 ![Horizon dashboard login screen](img/horizon-keystone.png)
 
-After the first login the participants should be able to see the pre-launched server with GPU support. The participants from the Dashboard can terminate the preconfigured server and can launch additional service till the allowed overall limit per team:
+After the first login, the participants should be able to see the pre-launched server with GPU support. The participants from the Dashboard can terminate the preconfigured server and can launch additional service till the allowed overall limit per team, which are:
 
- - max 20 instances
- - max 20 CPU cores
- - max 50 GB RAM
- - max 10 disk with a max 1000 GB storage in total
+ - **max 20 instances**
+ - **max 20 CPU cores** total in all instances
+ - **max 50 GB RAM** total in all instances
+ - **max 10 disks** with a **max 1000 GB** storage in total
+
+From the virtual servers you can access the CDSE resources and the additional datasets which are mentioned in the [Data Catalogue](data-catalogue.md).
+
+:::{Note}
+The sample notebooks to access the datasets are availble are available in these folders:
+ - [https://github.com/eurostat/eubd2025_docs/tree/main/cdse-notebooks](https://github.com/eurostat/eubd2025_docs/tree/main/cdse-notebooks)
+ - [https://github.com/eurostat/eubd2025_docs/tree/main/cf-notebooks](https://github.com/eurostat/eubd2025_docs/tree/main/cf-notebooks)
+:::
  
- 
-From the virtual servers you can access the CDSE resources and the additional dataset which are mentioned in the Data Catalogue.
-The sample notebooks are accessible under this folder: 
+## Step by step instructions to recreate the customized image with additional services (JupyterHub,Rstudio,Shiny,Superset)
+
+1. After login in to the [Horizon dashboard](https://horizon.cloudferro.com/) go to the ***Instances*** in the left menu and choose ***Launch Instance***.
+
+![Horizon dashboard instances](img/launch-instance.png)
  
