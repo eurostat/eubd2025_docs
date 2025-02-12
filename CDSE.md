@@ -18,6 +18,7 @@ Here are the links to the Jupyter notebooks showcased during the platform webina
  - [SentinelHub data visualisation](cdse-notebooks/sentinelhub-data-visualisation.ipynb)
  - [OpenEO data processing](cdse-notebooks/openeo-example.ipynb)  
 
+
 There are many other notebooks with examples how to use the CDSE services. They are available here: 
  - [https://github.com/eu-cdse/notebook-samples/](https://github.com/eu-cdse/notebook-samples/)
  - [https://github.com/Open-EO/openeo-community-examples/tree/main/python](https://github.com/Open-EO/openeo-community-examples/tree/main/python).
