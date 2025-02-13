@@ -4,7 +4,7 @@ In addition to the standard [CDSE services](CDSE.md) the hackathon participants 
 
 For the access to the CREODIAS platform each team will receive one Keystone credential and an SSH key to be used with the pre-configured OS-GEO live server with additional services (Rstudio, JupyterHub, Shiny, Apache Superset).
 
-On the [Horizon Dashboard](https://horizon.cloudferro.com/) the participants have to use the option ***Keystone credentials*** and use the Domain ***cloud_078898*** and region ***WAW3-2***.  
+During the hackathon in the [Horizon Dashboard](https://horizon.cloudferro.com/) the participants have to use the option ***Keystone credentials*** and use the Domain ***cloud_078898*** and region ***WAW3-2***.  
 
 ![Horizon dashboard login screen](img/horizon-keystone.png)
 
@@ -18,10 +18,10 @@ After the first login, the participants should be able to see the pre-launched s
 From the virtual servers you can access the CDSE resources and the additional datasets which are mentioned in the [Data Catalogue](data-catalogue.md).
 
 :::{Note}
-The sample notebooks to access the datasets together with some description of the data are available in these folders:
- - [https://github.com/eurostat/eubd2025_docs/tree/main/cdse-notebooks](https://github.com/eurostat/eubd2025_docs/tree/main/cdse-notebooks)
- - [https://github.com/eurostat/eubd2025_docs/tree/main/cf-notebooks](https://github.com/eurostat/eubd2025_docs/tree/main/cf-notebooks)
- - [https://github.com/eurostat/eubd2025_docs/tree/main/docs](https://github.com/eurostat/eubd2025_docs/tree/main/docs)
+The sample notebooks to access the datasets together with some description of the data are available in these folders in this repository:
+ - [cdse-notebooks](https://github.com/eurostat/eubd2025_docs/tree/main/cdse-notebooks)
+ - [cf-notebooks](https://github.com/eurostat/eubd2025_docs/tree/main/cf-notebooks)
+ - [docs](https://github.com/eurostat/eubd2025_docs/tree/main/docs)
 :::
  
 ## Step by step instructions to recreate the customized image with additional services (JupyterHub,Rstudio,Shiny,Superset)
@@ -41,7 +41,7 @@ The sample notebooks to access the datasets together with some description of th
 4. The next step is to select the flavor of the instance e.g. size of CPU, RAM and disk. 
 
   :::{Important}
-  The instance should have at least 40GB of disk!
+  The instance should have at least **40GB** of disk!
   :::
 
   ![Flavor](img/flavor.png)
@@ -81,7 +81,8 @@ In the account there can be already predefined security groups contain these por
 
 11. To enable RDP and add the additional services you have to run the following shell script: [add_services_nogpu.sh](scripts/add_services_nogpu.sh)
     For that, you have to upload/copy (e.g. WinSCP) to the server. Make it executable and run in a terminal.
-    ```{bash}
+    
+    ```{code-block} 
     chmod +x add_services_nogpu.sh
     ./add_services_nogpu.sh
     ```
@@ -91,8 +92,8 @@ In the account there can be already predefined security groups contain these por
     :::
     
     :::{Note}
-    The script runs and install all the services and libraries. It restarts several times the servers during this process and can last up to 1 hour.
-    You can check the installation status with 'more ~/.service_install_status' in the terminal. When it finishes the status will be `everything went well`.  
+    The script runs and install all the services and libraries. The script restarts several times the server during the installation process and can last up to 1 hour.
+    You can check the installation status with `more ~/.service_install_status` in the terminal. When it finishes the status will be `everything went well`.  
     ![Instal finished](img/install-finished.png)
     :::
     
