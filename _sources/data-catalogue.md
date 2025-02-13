@@ -57,7 +57,7 @@ For operational needs of the Copernicus programme, several Sentinel satellites h
 
 :::{Note}
 You will find several Jupyter Notebook examples on how to extract information from these data collections here:
-https://documentation.dataspace.copernicus.eu/Usecase.html 
+[https://documentation.dataspace.copernicus.eu/Usecase.html](https://documentation.dataspace.copernicus.eu/Usecase.html) 
 :::
 
 
@@ -82,7 +82,7 @@ For more information, see: [Complementary data | Copernicus Data Space Ecosystem
 For a more complete picture, and detailed information on every available product, please refer to the [Data Documentation](https://documentation.dataspace.copernicus.eu/Data.html).
 :::
 
-## 3: Relevant official statistics sata and aervices - Hackathon auxiliary datasets
+## 3: Relevant official statistics data and services - Hackathon auxiliary datasets
 
 The auxiliary statistical datasets will be made available for all participants via API and object storage. They will cover:  
 
@@ -141,7 +141,14 @@ Natura 2000 is an ecological network of protected areas, set up to ensure the su
 :::{Note}
 Here is a sample code how to access and use the Natura 2000 data in the platform: [Natura 2000 notebook](cf-notebooks/Example_Natura_2000.ipynb).
 :::
- 
+
+ - **Climate Data Store**
+The Climate Data Store provides authoritative information about the past, present and future climate in Europe and the rest of the World.  For more information see:  [https://cds.climate.copernicus.eu/#!/home](https://cds.climate.copernicus.eu/#!/home)  
+
+:::{Note}
+Here is a sample code how to access and use data from the climate data store in the platform:  [Climate data store notebook](cdse-notebooks/climate-data-access.ipynb).
+:::
+  
 
 ## 4: Own Hackathon Datasets
 
@@ -166,6 +173,6 @@ For more information, see also: [https://dataspace.copernicus.eu/news/2024-12-9-
 
 ## 6: Link to the hackathon platform documentation with sample codes for data access and processing 
 
-The resources available during the hackathon is described in this repository under the following link:
+The computational resources available during the hackathon is described in this repository under the following link:
 
 **[https://eurostat.github.io/eubd2025_docs/](https://eurostat.github.io/eubd2025_docs/)** 

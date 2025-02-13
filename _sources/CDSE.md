@@ -18,6 +18,13 @@ Here are the links to the Jupyter notebooks showcased during the platform webina
  - [SentinelHub data visualisation](cdse-notebooks/sentinelhub-data-visualisation.ipynb)
  - [OpenEO data processing](cdse-notebooks/openeo-example.ipynb)  
 
+
 There are many other notebooks with examples how to use the CDSE services. They are available here: 
  - [https://github.com/eu-cdse/notebook-samples/](https://github.com/eu-cdse/notebook-samples/)
  - [https://github.com/Open-EO/openeo-community-examples/tree/main/python](https://github.com/Open-EO/openeo-community-examples/tree/main/python).
+ 
+ 
+:::{Important}
+When you use the JupyterLab in the CDSE save your data under the ```/mystorage``` folder, because this is the storage which is persistent between different JuputerLab sessions. All other folders are erased at the reluanch of the JupyterLab server.
+![Persistant storage in CDSE](img/mystorage.png)
+:::

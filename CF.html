@@ -164,11 +164,12 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="README.html">
-                    2025 EU Big Data hackathon infrastructure
+                    2025 EU Big Data hackathon documentation
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="data-catalogue.html">Data Catalogue</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CDSE.html">The Copernicus Data Space Ecosystem (CDSE)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Virtual server in the cloud with access to Earth Observation (EO) data</a></li>
 </ul>
@@ -343,7 +344,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -359,6 +362,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-instructions-to-recreate-the-customized-image-with-additional-services-jupyterhub-rstudio-shiny-superset">Step by step instructions to recreate the customized image with additional services (JupyterHub,Rstudio,Shiny,Superset)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-services">Accessing the services</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -374,15 +386,107 @@ document.write(`
 <p>For the access to the CREODIAS platform each team will receive one Keystone credential and an SSH key to be used with the pre-configured OS-GEO live server with additional services (Rstudio, JupyterHub, Shiny, Apache Superset).</p>
 <p>On the <a class="reference external" href="https://horizon.cloudferro.com/">Horizon Dashboard</a> the participants have to use the option <em><strong>Keystone credentials</strong></em> and use the Domain <em><strong>cloud_078898</strong></em> and region <em><strong>WAW3-2</strong></em>.</p>
 <p><img alt="Horizon dashboard login screen" src="_images/horizon-keystone.png" /></p>
-<p>After the first login the participants should be able to see the pre-launched server with GPU support. The participants from the Dashboard can terminate the preconfigured server and can launch additional service till the allowed overall limit per team:</p>
+<p>After the first login, the participants should be able to see the pre-launched server with GPU support. The participants from the Dashboard can terminate the preconfigured server and can launch additional service till the allowed overall limit per team, which are:</p>
 <ul class="simple">
-<li><p>max 20 instances</p></li>
-<li><p>max 20 CPU cores</p></li>
-<li><p>max 50 GB RAM</p></li>
-<li><p>max 10 disk with a max 1000 GB storage in total</p></li>
+<li><p><strong>max 20 instances</strong></p></li>
+<li><p><strong>max 20 CPU cores</strong> total in all instances</p></li>
+<li><p><strong>max 50 GB RAM</strong> total in all instances</p></li>
+<li><p><strong>max 10 disks</strong> with a <strong>max 1000 GB</strong> storage in total</p></li>
 </ul>
-<p>From the virtual servers you can access the CDSE resources and the additional dataset which are mentioned in the Data Catalogue.
-The sample notebooks are accessible under this folder:</p>
+<p>From the virtual servers you can access the CDSE resources and the additional datasets which are mentioned in the <a class="reference internal" href="data-catalogue.html"><span class="doc std std-doc">Data Catalogue</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The sample notebooks to access the datasets together with some description of the data are available in these folders:</p>
+<ul class="simple">
+<li><p><a class="github reference external" href="https://github.com/eurostat/eubd2025_docs/tree/main/cdse-notebooks">eurostat/eubd2025_docs</a></p></li>
+<li><p><a class="github reference external" href="https://github.com/eurostat/eubd2025_docs/tree/main/cf-notebooks">eurostat/eubd2025_docs</a></p></li>
+<li><p><a class="github reference external" href="https://github.com/eurostat/eubd2025_docs/tree/main/docs">eurostat/eubd2025_docs</a></p></li>
+</ul>
+</div>
+<section id="step-by-step-instructions-to-recreate-the-customized-image-with-additional-services-jupyterhub-rstudio-shiny-superset">
+<h2>Step by step instructions to recreate the customized image with additional services (JupyterHub,Rstudio,Shiny,Superset)<a class="headerlink" href="#step-by-step-instructions-to-recreate-the-customized-image-with-additional-services-jupyterhub-rstudio-shiny-superset" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>After login in to the <a class="reference external" href="https://horizon.cloudferro.com/">Horizon dashboard</a> go to the <em><strong>Instances</strong></em> in the left menu and choose <em><strong>Launch Instance</strong></em>.</p></li>
+</ol>
+<p><img alt="Horizon dashboard instances" src="_images/launch-instance.png" /></p>
+<ol class="arabic simple" start="2">
+<li><p>In the new window first you give a name to your instance</p></li>
+</ol>
+<p><img alt="Instance name" src="_images/instance-name.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p>Then select the source of the image: <em><strong>OSGeoLive 16.0</strong></em></p></li>
+</ol>
+<p><img alt="Image source" src="_images/source.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p>The next step is to select the flavor of the instance e.g. size of CPU, RAM and disk.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The instance should have at least 40GB of disk!</p>
+</div>
+<p><img alt="Flavor" src="_images/flavor.png" /></p>
+<ol class="arabic simple" start="5">
+<li><p>Under the networks add both networks</p></li>
+</ol>
+<p><img alt="Networks" src="_images/networks.png" /></p>
+<ol class="arabic simple" start="6">
+<li><p>Under the Security Groups enable the following ports for incoming connections:</p></li>
+</ol>
+<ul class="simple">
+<li><p>22 (SSH)</p></li>
+<li><p>3389 (RDP)</p></li>
+<li><p>3838 (Shiny)</p></li>
+<li><p>8000 (JupyterHub)</p></li>
+<li><p>8088 (Superset)</p></li>
+<li><p>8787 (Rstudio)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the account there can be already predefined security groups contain these port. If not, you have to create it following <a class="reference external" href="https://creodias.docs.cloudferro.com/en/latest/cloud/How-to-use-Security-Groups-in-Horizon-on-Creodias.html">these instructions</a></p>
+</div>
+<p><img alt="Security Groups" src="_images/security-groups.png" /></p>
+<ol class="arabic simple" start="7">
+<li><p>Finally you select or create an SSH key pair that will be used to connect to the instance for the first time.</p></li>
+</ol>
+<p><img alt="SSH key" src="_images/key-pair.png" /></p>
+<ol class="arabic simple" start="8">
+<li><p>Launch the instance and wait until it will be running</p></li>
+<li><p>Create and associate an external IP following <a class="reference external" href="https://creodias.docs.cloudferro.com/en/latest/networking/How-to-Add-or-Remove-Floating-IPs-to-your-VM-on-Creodias.html">these steps</a></p></li>
+</ol>
+<p><img alt="Add IP" src="_images/add-ip.png" /></p>
+<ol class="arabic simple" start="10">
+<li><p>Then you can access your instance with an SSH client, and the first step will be to create a password for the default <code class="docutils literal notranslate"><span class="pre">eouser</span></code>. After creating the password the connection will be automatically closed.</p></li>
+</ol>
+<p><img alt="Initialize password" src="_images/pwd-change.png" /></p>
+<ol class="arabic" start="11">
+<li><p>To enable RDP and add the additional services you have to run the following shell script: <a class="reference download internal" download="" href="_downloads/f22e38114b583c901cc246cf7836aca6/add_services_nogpu.sh"><span class="xref download myst">add_services_nogpu.sh</span></a>
+For that, you have to upload/copy (e.g. WinSCP) to the server. Make it executable and run in a terminal.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Before you run the script replace in the script the Superset admin password <code class="docutils literal notranslate"><span class="pre">&lt;your_superset_password&gt;</span></code> on line 136 with your own password.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The script runs and install all the services and libraries. It restarts several times the servers during this process and can last up to 1 hour.
+You can check the installation status with ‘more ~/.service_install_status’ in the terminal. When it finishes the status will be <code class="docutils literal notranslate"><span class="pre">everything</span> <span class="pre">went</span> <span class="pre">well</span></code>.<br />
+<img alt="Instal finished" src="_images/install-finished.png" /></p>
+</div>
+</li>
+</ol>
+</section>
+<section id="accessing-the-services">
+<h2>Accessing the services<a class="headerlink" href="#accessing-the-services" title="Permalink to this heading">#</a></h2>
+<p><strong>RDP</strong></p>
+<p>The service is available under the external IP:3389 created under point 9 above in standard RDP clients.  In case you are behind proxy you can tunnel the internal IP:3389 through SSH to your localhost and connect to your localhost port with the RDP client.</p>
+<p><strong>Shiny</strong></p>
+<p>The service is available in a browser under the external  IP:3838 created under point 9 above.</p>
+<p><strong>JupyterHub</strong></p>
+<p>The service is available in a browser under the external IP:8000 created under point 9 above. The username is <code class="docutils literal notranslate"><span class="pre">eouser</span></code> and password what is defined under point 10.</p>
+<p><strong>Apache Superset</strong></p>
+<p>The service is available in a browser under the external IP:8088 created under point 9 above. The username is <code class="docutils literal notranslate"><span class="pre">eouser</span></code> and password what is defined under point 11 defined in the <code class="docutils literal notranslate"><span class="pre">add_services_nogpu.sh</span></code>.</p>
+<p><strong>Rstudio</strong></p>
+<p>The service is available in a browser under the external IP:8787 created under point 9 above. The username is <code class="docutils literal notranslate"><span class="pre">eouser</span></code> and password what is defined under point 10.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -430,6 +534,21 @@ The sample notebooks are accessible under this folder:</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-instructions-to-recreate-the-customized-image-with-additional-services-jupyterhub-rstudio-shiny-superset">Step by step instructions to recreate the customized image with additional services (JupyterHub,Rstudio,Shiny,Superset)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-services">Accessing the services</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

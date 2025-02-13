@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Virtual server in the cloud with access to Earth Observation (EO) data" href="CF.html" />
-    <link rel="prev" title="2025 EU Big Data hackathon infrastructure" href="README.html" />
+    <link rel="prev" title="Data Catalogue" href="data-catalogue.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -165,11 +165,12 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="README.html">
-                    2025 EU Big Data hackathon infrastructure
+                    2025 EU Big Data hackathon documentation
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="data-catalogue.html">Data Catalogue</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">The Copernicus Data Space Ecosystem (CDSE)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CF.html">Virtual server in the cloud with access to Earth Observation (EO) data</a></li>
 </ul>
@@ -392,6 +393,11 @@ document.write(`
 <li><p><a class="github reference external" href="https://github.com/eu-cdse/notebook-samples/">eu-cdse/notebook-samples</a></p></li>
 <li><p><a class="github reference external" href="https://github.com/Open-EO/openeo-community-examples/tree/main/python">Open-EO/openeo-community-examples</a>.</p></li>
 </ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When you use the JupyterLab in the CDSE save your data under the <code class="docutils literal notranslate"><span class="pre">/mystorage</span></code> folder, because this is the storage which is persistent between different JuputerLab sessions. All other folders are erased at the reluanch of the JupyterLab server.
+<img alt="Persistant storage in CDSE" src="_images/mystorage.png" /></p>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -425,12 +431,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="README.html"
+       href="data-catalogue.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">2025 EU Big Data hackathon infrastructure</p>
+        <p class="prev-next-title">Data Catalogue</p>
       </div>
     </a>
     <a class="right-next"
