@@ -1,5 +1,6 @@
 format: jb-book
 root: README
 chapters:
+- file: data-catalogue
 - file: CDSE
 - file: CF
