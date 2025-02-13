@@ -88,7 +88,7 @@ In the account there can be already predefined security groups contain these por
     ```
     
     :::{Important}
-    Before you run the script replace in the script the Superset admin password `<your_superset_password>` on line 136 with your own password. 
+    Before you run the script replace in the script on row 136 the Superset admin password `<your_superset_password>` with your own password. 
     :::
     
     :::{Note}
