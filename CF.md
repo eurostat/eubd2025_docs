@@ -18,7 +18,7 @@ After the first login, the participants should be able to see the pre-launched s
 From the virtual servers you can access the CDSE resources and the additional datasets which are mentioned in the [Data Catalogue](data-catalogue.md).
 
 :::{Note}
-The sample notebooks to access the datasets are availble are available in these folders:
+The sample notebooks to access the datasets are availble in these folders:
  - [https://github.com/eurostat/eubd2025_docs/tree/main/cdse-notebooks](https://github.com/eurostat/eubd2025_docs/tree/main/cdse-notebooks)
  - [https://github.com/eurostat/eubd2025_docs/tree/main/cf-notebooks](https://github.com/eurostat/eubd2025_docs/tree/main/cf-notebooks)
 :::
@@ -28,4 +28,21 @@ The sample notebooks to access the datasets are availble are available in these 
 1. After login in to the [Horizon dashboard](https://horizon.cloudferro.com/) go to the ***Instances*** in the left menu and choose ***Launch Instance***.
 
 ![Horizon dashboard instances](img/launch-instance.png)
- 
+
+2. In the new window first you give a name to your instance
+
+![Instance name](img/instance-name.png)
+
+3. Then select the source of the image: ***OSGeoLive 16.0***
+
+![Image source](img/source.png)
+
+4. The next step is to select the flavor of the instance e.g. size of CPU, RAM and disk. 
+
+:::{Important}
+The instance should have at least 40GB of disk!
+:::
+
+![Flavor](img/flavor.png)
+
+5. 
