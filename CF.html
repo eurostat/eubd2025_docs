@@ -384,7 +384,7 @@ document.write(`
 <h1>Virtual server in the cloud with access to Earth Observation (EO) data<a class="headerlink" href="#virtual-server-in-the-cloud-with-access-to-earth-observation-eo-data" title="Permalink to this heading">#</a></h1>
 <p>In addition to the standard <a class="reference internal" href="CDSE.html"><span class="doc std std-doc">CDSE services</span></a> the hackathon participants can launch virtual server in the <a class="reference external" href="https://creodias.eu/">CREODIAS</a> platform provided by CloudFerro.</p>
 <p>For the access to the CREODIAS platform each team will receive one Keystone credential and an SSH key to be used with the pre-configured OS-GEO live server with additional services (Rstudio, JupyterHub, Shiny, Apache Superset).</p>
-<p>On the <a class="reference external" href="https://horizon.cloudferro.com/">Horizon Dashboard</a> the participants have to use the option <em><strong>Keystone credentials</strong></em> and use the Domain <em><strong>cloud_078898</strong></em> and region <em><strong>WAW3-2</strong></em>.</p>
+<p>During the hackathon in the <a class="reference external" href="https://horizon.cloudferro.com/">Horizon Dashboard</a> the participants have to use the option <em><strong>Keystone credentials</strong></em> and use the Domain <em><strong>cloud_078898</strong></em> and region <em><strong>WAW3-2</strong></em>.</p>
 <p><img alt="Horizon dashboard login screen" src="_images/horizon-keystone.png" /></p>
 <p>After the first login, the participants should be able to see the pre-launched server with GPU support. The participants from the Dashboard can terminate the preconfigured server and can launch additional service till the allowed overall limit per team, which are:</p>
 <ul class="simple">
@@ -396,11 +396,11 @@ document.write(`
 <p>From the virtual servers you can access the CDSE resources and the additional datasets which are mentioned in the <a class="reference internal" href="data-catalogue.html"><span class="doc std std-doc">Data Catalogue</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The sample notebooks to access the datasets together with some description of the data are available in these folders:</p>
+<p>The sample notebooks to access the datasets together with some description of the data are available in these folders in this repository:</p>
 <ul class="simple">
-<li><p><a class="github reference external" href="https://github.com/eurostat/eubd2025_docs/tree/main/cdse-notebooks">eurostat/eubd2025_docs</a></p></li>
-<li><p><a class="github reference external" href="https://github.com/eurostat/eubd2025_docs/tree/main/cf-notebooks">eurostat/eubd2025_docs</a></p></li>
-<li><p><a class="github reference external" href="https://github.com/eurostat/eubd2025_docs/tree/main/docs">eurostat/eubd2025_docs</a></p></li>
+<li><p><a class="reference external" href="https://github.com/eurostat/eubd2025_docs/tree/main/cdse-notebooks">cdse-notebooks</a></p></li>
+<li><p><a class="reference external" href="https://github.com/eurostat/eubd2025_docs/tree/main/cf-notebooks">cf-notebooks</a></p></li>
+<li><p><a class="reference external" href="https://github.com/eurostat/eubd2025_docs/tree/main/docs">docs</a></p></li>
 </ul>
 </div>
 <section id="step-by-step-instructions-to-recreate-the-customized-image-with-additional-services-jupyterhub-rstudio-shiny-superset">
@@ -422,7 +422,7 @@ document.write(`
 </ol>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>The instance should have at least 40GB of disk!</p>
+<p>The instance should have at least <strong>40GB</strong> of disk!</p>
 </div>
 <p><img alt="Flavor" src="_images/flavor.png" /></p>
 <ol class="arabic simple" start="5">
@@ -461,14 +461,18 @@ document.write(`
 <ol class="arabic" start="11">
 <li><p>To enable RDP and add the additional services you have to run the following shell script: <a class="reference download internal" download="" href="_downloads/f22e38114b583c901cc246cf7836aca6/add_services_nogpu.sh"><span class="xref download myst">add_services_nogpu.sh</span></a>
 For that, you have to upload/copy (e.g. WinSCP) to the server. Make it executable and run in a terminal.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">add_services_nogpu</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">add_services_nogpu</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Before you run the script replace in the script the Superset admin password <code class="docutils literal notranslate"><span class="pre">&lt;your_superset_password&gt;</span></code> on line 136 with your own password.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The script runs and install all the services and libraries. It restarts several times the servers during this process and can last up to 1 hour.
-You can check the installation status with ‘more ~/.service_install_status’ in the terminal. When it finishes the status will be <code class="docutils literal notranslate"><span class="pre">everything</span> <span class="pre">went</span> <span class="pre">well</span></code>.<br />
+<p>The script runs and install all the services and libraries. The script restarts several times the server during the installation process and can last up to 1 hour.
+You can check the installation status with <code class="docutils literal notranslate"><span class="pre">more</span> <span class="pre">~/.service_install_status</span></code> in the terminal. When it finishes the status will be <code class="docutils literal notranslate"><span class="pre">everything</span> <span class="pre">went</span> <span class="pre">well</span></code>.<br />
 <img alt="Instal finished" src="_images/install-finished.png" /></p>
 </div>
 </li>
