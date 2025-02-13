@@ -2,7 +2,7 @@
 
 In addition to the standard [CDSE services](CDSE.md) the hackathon participants can launch virtual server in the [CREODIAS](https://creodias.eu/) platform provided by CloudFerro. 
 
-For the access to the CREODIAS platform each team will receive one Keystone credential and an SSH key to be used with the pre-configured OS-GEO live server with additional services (Rstudio, JupyterHub, Shiny, Apache Superset).
+For the access to the CREODIAS platform each team will receive one Keystone credential and an SSH key to be used with the pre-configured OSGeoLive server with additional services (Rstudio, JupyterHub, Shiny, Apache Superset).
 
 During the hackathon in the [Horizon Dashboard](https://horizon.cloudferro.com/) the participants have to use the option ***Keystone credentials*** and use the Domain ***cloud_078898*** and region ***WAW3-2***.  
 
@@ -24,7 +24,7 @@ The sample notebooks to access the datasets together with some description of th
  - [docs](https://github.com/eurostat/eubd2025_docs/tree/main/docs)
 :::
  
-## Step by step instructions to recreate the customized image with additional services (JupyterHub,Rstudio,Shiny,Superset)
+## Step by step instructions to recreate the customized image with additional services
 
 1. After login in to the [Horizon dashboard](https://horizon.cloudferro.com/) go to the ***Instances*** in the left menu and choose ***Launch Instance***.
 
