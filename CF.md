@@ -30,6 +30,7 @@ The sample notebooks to access the datasets together with some description of th
 ![Horizon dashboard login screen](img/horizon-keystone.png)
 
 5. After the first login, the participants should be able to see the pre-launched server with GPU support. The running server is a pre-configured [OSGeoLive](https://live.osgeo.org/en/index.html) server with additional services (Rstudio, JupyterHub, Shiny, Apache Superset). 
+The external/public IP address of the server is available in the [Horizon Dashboard](https://horizon.cloudferro.com/) under the ***Instances*** tab in the left menu. 
 The participants from the Dashboard can terminate the preconfigured server and can launch additional service till the allowed overall limit per team, which are:
 
  - **max 20 instances**
@@ -38,7 +39,7 @@ The participants from the Dashboard can terminate the preconfigured server and c
  - **max 10 disks** with a **max 1000 GB** storage in total
 
 6. Using the SSH key from the file downloaded in step 3 the participant should login with ssh to running server and change password. 
-The public IP address of the server is available in the [Horizon Dashboard](https://horizon.cloudferro.com/) under the ***Instances*** in the left menu. 
+
     :::{Important}
     The default username is ***eouser***. 
     :::important
@@ -60,7 +61,7 @@ If the user not prompted directly to change password, it can be done manually by
 
 ### RDP
 
-The service is available in standard RDP clients at the `<external/public IP>:3389` retrieved under step 5 above.  In case the participant is behind proxy the connection can be tunneled from the `<internal IP:3389>` through SSH to the `<localhost>:xxxx` and connect to the localhost port with the RDP client.  
+The service is available in standard RDP clients at the `<external/public IP>:3389` retrieved under step 5 above.  In case the participant is behind a proxy, the connection can be tunneled from the `<internal IP:3389>` through SSH to the `<localhost>:xxxx` and connect to the localhost port with the RDP client.  
 
 ### Shiny
 
@@ -71,7 +72,7 @@ The service is available in a browser under the `<external/public IP:3838>` retr
 The service is available in a browser under the `<external/public IP:8000>` retrieved under step 5 above. The username is `eouser` and password what is defined under step 6 above.   
 
 :::{Note}
-In case after the first lunch the user receive the error that the repository read only, the user should first click on the highlighted left file browser panel first and then the read-only protection disappears. 
+In case after the first lunch the user receive the error that the repository is read only, the user should first click on the highlighted left file browser panel first and then the read-only protection disappears. 
   ![Jupyter read only error](img/jupyter-error-highlighted.png)
 :::
 
