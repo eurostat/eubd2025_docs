@@ -2,7 +2,7 @@
 
 In addition to the standard [CDSE services](CDSE.md) the hackathon participants can launch virtual server in the [CREODIAS](https://creodias.eu/) platform provided by CloudFerro. 
 
-For the access to the CREODIAS platform each team will receive one Keystone credential and an SSH key to be used with the pre-configured OS-GEO live server with additional services (Rstudio, JupyterHub, Shiny, Apache Superset).
+For the access to the CREODIAS platform each team will receive one Keystone credential and an SSH key to be used with the pre-configured [OSGeoLive](https://live.osgeo.org/en/index.html) server with additional services (Rstudio, JupyterHub, Shiny, Apache Superset).
 
 During the hackathon in the [Horizon Dashboard](https://horizon.cloudferro.com/) the participants have to use the option ***Keystone credentials*** and use the Domain ***cloud_078898*** and region ***WAW3-2***.  
 
@@ -24,7 +24,7 @@ The sample notebooks to access the datasets together with some description of th
  - [docs](https://github.com/eurostat/eubd2025_docs/tree/main/docs)
 :::
  
-## Step by step instructions to recreate the customized image with additional services (JupyterHub,Rstudio,Shiny,Superset)
+## Step by step instructions to recreate the customized image with additional services
 
 1. After login in to the [Horizon dashboard](https://horizon.cloudferro.com/) go to the ***Instances*** in the left menu and choose ***Launch Instance***.
 
@@ -75,7 +75,7 @@ In the account there can be already predefined security groups contain these por
 
   ![Add IP](img/add-ip.png)
 
-10. Then you can access your instance with an SSH client, and the first step will be to create a password for the default `eouser`. After creating the password the connection will be automatically closed.
+10. Then you can access your instance with an SSH client using the key from step 7 and the username is ***eouser***. Then the first step will be to create a password for the default user (eouser). After creating the password the connection will be automatically closed.
 
   ![Initialize password](img/pwd-change.png)
 
@@ -101,22 +101,22 @@ In the account there can be already predefined security groups contain these por
 
 **RDP**
 
-The service is available under the external IP:3389 created under point 9 above in standard RDP clients.  In case you are behind proxy you can tunnel the internal IP:3389 through SSH to your localhost and connect to your localhost port with the RDP client.  
+The service is available under the external IP:3389 created under step 9 above in standard RDP clients.  In case you are behind proxy you can tunnel the internal IP:3389 through SSH to your localhost and connect to your localhost port with the RDP client.  
 
 **Shiny**
 
-The service is available in a browser under the external  IP:3838 created under point 9 above. 
+The service is available in a browser under the external  IP:3838 created under step 9 above. 
 
 **JupyterHub**
 
-The service is available in a browser under the external IP:8000 created under point 9 above. The username is `eouser` and password what is defined under point 10.   
+The service is available in a browser under the external IP:8000 created under step 9 above. The username is `eouser` and password what is defined under step 10.   
 
 **Apache Superset**
 
-The service is available in a browser under the external IP:8088 created under point 9 above. The username is `eouser` and password what is defined under point 11 defined in the `add_services_nogpu.sh`.   
+The service is available in a browser under the external IP:8088 created under step 9 above. The username is `eouser` and password what is defined under step 11 defined in the `add_services_nogpu.sh`.   
 
 **Rstudio**
 
-The service is available in a browser under the external IP:8787 created under point 9 above. The username is `eouser` and password what is defined under point 10.   
+The service is available in a browser under the external IP:8787 created under step 9 above. The username is `eouser` and password what is defined under step 10.   
 
 
