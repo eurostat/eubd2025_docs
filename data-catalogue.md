@@ -94,6 +94,7 @@ For more information:
 
 :::{Note}
 Here is a sample code how to access and use the NUTS data in the platform: [NUTS data notebook](cf-notebooks/Example_NUTS.ipynb).
+To run this notebook, an `.s3cfg` [like this sample file](scripts/.s3cfg) is needed with credentials to the source bucket.  
 :::
 
  -	**Population grid (geopackage and raster, 1km resolution)**  
@@ -102,6 +103,7 @@ For more information: [https://ec.europa.eu/eurostat/web/gisco/geodata/populatio
 
 :::{Note}
 Here is a sample code how to access and use the population grid data in the platform: [Census data notebook](cf-notebooks/Example_Census_GRID.ipynb).
+To run this notebook, an `.s3cfg` [like this sample file](scripts/.s3cfg) is needed with credentials to the source bucket.  
 :::
 
  - **GISCO Reference Grid**
@@ -110,6 +112,7 @@ For more information on Eurostat’s GISCO services, see also: [https://ec.europ
 
 :::{Note}
 Here is a sample code how to access and use the reference grid data in the platform: [Reference grid notebook](cf-notebooks/Example_GISCO_Reference_Grid.ipynb).
+To run this notebook, an `.s3cfg` [like this sample file](scripts/.s3cfg) is needed with credentials to the source bucket.  
 :::
 
  - **Global Human Settlement layer (raster)** 
@@ -118,6 +121,7 @@ For more information, see: [https://data.jrc.ec.europa.eu/collection/ghsl](https
 
 :::{Note}
 Here is a sample code how to access and use the GHS data in the platform: [GHS notebook](cf-notebooks/Example_GHSL.ipynb).
+To run this notebook, an `.s3cfg` [like this sample file](scripts/.s3cfg) is needed with credentials to the source bucket.  
 :::
 
  -	**Land cover (CORINE or ESA WorldCover)**
@@ -126,6 +130,7 @@ Interactively explore [Copernicus Global Land](https://link.dataspace.copernicus
 
 :::{Note}
 Here is a sample code how to access and use the Land cover data in the platform: [Land cover notebook](cdse-notebooks/openeo-example.ipynb).
+To run this notebook, an `.s3cfg` [like this sample file](scripts/.s3cfg) is needed with credentials to the source bucket.  
 :::
 
  - **Field polygons for all countries over Europe for 2022** 
@@ -133,6 +138,7 @@ Vector dataset is available and described here: [https://zenodo.org/records/1422
 
 :::{Note}
 Here is a sample code how to access and use the Field polygons in the platform: [Field polygons notebook](cf-notebooks/Example_Field_boundaries.ipynb).
+To run this notebook, an `.s3cfg` [like this sample file](scripts/.s3cfg) is needed with credentials to the source bucket.  
 :::
  
  - **Natura 2000**
@@ -140,6 +146,7 @@ Natura 2000 is an ecological network of protected areas, set up to ensure the su
 
 :::{Note}
 Here is a sample code how to access and use the Natura 2000 data in the platform: [Natura 2000 notebook](cf-notebooks/Example_Natura_2000.ipynb).
+To run this notebook, an `.s3cfg` [like this sample file](scripts/.s3cfg) is needed with credentials to the source bucket.  
 :::
 
  - **Climate Data Store**
@@ -147,6 +154,7 @@ The Climate Data Store provides authoritative information about the past, presen
 
 :::{Note}
 Here is a sample code how to access and use data from the climate data store in the platform:  [Climate data store notebook](cdse-notebooks/climate-data-access.ipynb).
+To run this notebook, an `.cdsapirc` [like this sample file](scripts/.cdsapirc) is needed with credentials to the API.  
 :::
   
 

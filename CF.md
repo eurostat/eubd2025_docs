@@ -9,8 +9,11 @@ The sample notebooks to access the datasets together with some description of th
  - [cdse-notebooks](https://github.com/eurostat/eubd2025_docs/tree/main/cdse-notebooks)
  - [cf-notebooks](https://github.com/eurostat/eubd2025_docs/tree/main/cf-notebooks)
  - [docs](https://github.com/eurostat/eubd2025_docs/tree/main/docs)
+
+In order to recreate the extended OSGeoLive image, follow [these instructions](osgeoplus.md).
 :::
- 
+
+
 ## First steps at the hackathon
 
 1. The hackathon participants receive a message with a link in your team private channel. Clicking on the link you get to 1password site.
