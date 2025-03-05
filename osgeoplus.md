@@ -1,4 +1,4 @@
-# Step by step instructions to recreate the customized OSGeoLive image with additional services
+## Step by step instructions to recreate the customized OSGeoLive image with additional services
 
 1. After login in to the [Horizon dashboard](https://horizon.cloudferro.com/) go to the ***Instances*** in the left menu and choose ***Launch Instance***.
 
