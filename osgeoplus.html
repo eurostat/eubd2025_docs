@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Virtual server in the cloud with access to Earth Observation (EO) data &#8212; 2025 EU Big Data hackathon</title>
+    <title>Step by step instructions to recreate the customized OSGeoLive image with additional services &#8212; 2025 EU Big Data hackathon</title>
   
   
   
@@ -62,11 +62,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'CF';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'osgeoplus';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="The Copernicus Data Space Ecosystem (CDSE)" href="CDSE.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -168,10 +167,10 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="data-catalogue.html">Data Catalogue</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CDSE.html">The Copernicus Data Space Ecosystem (CDSE)</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Virtual server in the cloud with access to Earth Observation (EO) data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CF.html">Virtual server in the cloud with access to Earth Observation (EO) data</a></li>
 </ul>
 
     </div>
@@ -243,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/eurostat/eubd2025_docs/issues/new?title=Issue%20on%20page%20%2FCF.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/eurostat/eubd2025_docs/issues/new?title=Issue%20on%20page%20%2Fosgeoplus.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -273,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/CF.md" target="_blank"
+      <li><a href="_sources/osgeoplus.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -357,7 +356,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Virtual server in the cloud with access to Earth Observation (EO) data</h1>
+    <h1>Step by step instructions to recreate the customized OSGeoLive image with additional services</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -367,15 +366,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-at-the-hackathon">First steps at the hackathon</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-services">Accessing the services</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rdp">RDP</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shiny">Shiny</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyterhub">JupyterHub</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apache-superset">Apache Superset</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rstudio">Rstudio</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-services">Accessing the services</a></li>
 </ul>
             </nav>
         </div>
@@ -387,99 +378,92 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="virtual-server-in-the-cloud-with-access-to-earth-observation-eo-data">
-<h1>Virtual server in the cloud with access to Earth Observation (EO) data<a class="headerlink" href="#virtual-server-in-the-cloud-with-access-to-earth-observation-eo-data" title="Permalink to this heading">#</a></h1>
-<p>In addition to the standard <a class="reference internal" href="CDSE.html"><span class="doc std std-doc">CDSE services</span></a> the hackathon participants can launch virtual server in the <a class="reference external" href="https://creodias.eu/">CREODIAS</a> platform provided by CloudFerro.</p>
-<p>From the virtual servers you can access the CDSE resources and the additional datasets which are mentioned in the <a class="reference internal" href="data-catalogue.html"><span class="doc std std-doc">Data Catalogue</span></a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The sample notebooks to access the datasets together with some description of the data are available in these folders in this repository:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/eurostat/eubd2025_docs/tree/main/cdse-notebooks">cdse-notebooks</a></p></li>
-<li><p><a class="reference external" href="https://github.com/eurostat/eubd2025_docs/tree/main/cf-notebooks">cf-notebooks</a></p></li>
-<li><p><a class="reference external" href="https://github.com/eurostat/eubd2025_docs/tree/main/docs">docs</a></p></li>
-</ul>
-<p>In order to recreate the extended OSGeoLive image, follow <a class="reference internal" href="osgeoplus.html"><span class="doc std std-doc">these instructions</span></a>.</p>
-</div>
-<section id="first-steps-at-the-hackathon">
-<h2>First steps at the hackathon<a class="headerlink" href="#first-steps-at-the-hackathon" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="step-by-step-instructions-to-recreate-the-customized-osgeolive-image-with-additional-services">
+<h1>Step by step instructions to recreate the customized OSGeoLive image with additional services<a class="headerlink" href="#step-by-step-instructions-to-recreate-the-customized-osgeolive-image-with-additional-services" title="Permalink to this heading">#</a></h1>
 <ol class="arabic simple">
-<li><p>The hackathon participants receive a message with a link in your team private channel. Clicking on the link you get to 1password site.</p></li>
+<li><p>After login in to the <a class="reference external" href="https://horizon.cloudferro.com/">Horizon dashboard</a> go to the <em><strong>Instances</strong></em> in the left menu and choose <em><strong>Launch Instance</strong></em>.</p></li>
 </ol>
-<p><img alt="1password login screen" src="_images/1password_start.png" /></p>
+<p><img alt="Horizon dashboard instances" src="_images/launch-instance.png" /></p>
 <ol class="arabic simple" start="2">
-<li><p>Each participant should provide the email what (s)he used for the CDSE registration and on that email a verification code will be sent that has to be entered in the next screen.</p></li>
+<li><p>In the new window first you give a name to your instance</p></li>
 </ol>
-<p><img alt="1password verification screen" src="_images/1password_verification.png" /></p>
+<p><img alt="Instance name" src="_images/instance-name.png" /></p>
 <ol class="arabic simple" start="3">
-<li><p>After successful verification the participant will be able to download a text file containing all the credentials.</p></li>
+<li><p>Then select the source of the image: <em><strong>OSGeoLive 16.0</strong></em></p></li>
 </ol>
-<p><img alt="1password download screen" src="_images/1password_download.png" /></p>
+<p><img alt="Image source" src="_images/source.png" /></p>
 <ol class="arabic simple" start="4">
-<li><p>The access of the cloud environment is possible through the <a class="reference external" href="https://horizon.cloudferro.com/auth/login/?next=/">Horizon Dashboard</a> by using the domain, username, password and region provided in the text file download in step 3.  (Authenticate using: <em><strong>Keystone credentials</strong></em>, region <em><strong>WAW3-2</strong></em>).</p></li>
+<li><p>The next step is to select the flavor of the instance e.g. size of CPU, RAM and disk.</p></li>
 </ol>
-<p><img alt="Horizon dashboard login screen" src="_images/horizon-keystone.png" /></p>
-<ol class="arabic simple" start="5">
-<li><p>After the first login, the participants should be able to see the pre-launched server with GPU support. The running server is a pre-configured <a class="reference external" href="https://live.osgeo.org/en/index.html">OSGeoLive</a> server with additional services (Rstudio, JupyterHub, Shiny, Apache Superset).
-The external/public IP address of the server is available in the <a class="reference external" href="https://horizon.cloudferro.com/">Horizon Dashboard</a> under the <em><strong>Instances</strong></em> tab in the left menu.
-The participants from the Dashboard can terminate the preconfigured server and can launch additional service till the allowed overall limit per team, which are:</p></li>
-</ol>
-<ul class="simple">
-<li><p><strong>max 20 instances</strong></p></li>
-<li><p><strong>max 20 CPU cores</strong> total in all instances</p></li>
-<li><p><strong>max 50 GB RAM</strong> total in all instances</p></li>
-<li><p><strong>max 10 disks</strong> with a <strong>max 1000 GB</strong> storage in total</p></li>
-</ul>
-<ol class="arabic" start="6">
-<li><p>Using the SSH key from the file downloaded in step 3 the participant should login with ssh to running server and change password.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>The default username is <em><strong>eouser</strong></em>.</p>
-<div class="highlight-important notranslate"><div class="highlight"><pre><span></span>
+<p>The instance should have at least <strong>40GB</strong> of disk!</p>
+</div>
+<p><img alt="Flavor" src="_images/flavor.png" /></p>
+<ol class="arabic simple" start="5">
+<li><p>Under the networks add both networks</p></li>
+</ol>
+<p><img alt="Networks" src="_images/networks.png" /></p>
+<ol class="arabic simple" start="6">
+<li><p>Under the Security Groups enable the following ports for incoming connections:</p></li>
+</ol>
+<ul class="simple">
+<li><p>22 (SSH)</p></li>
+<li><p>3389 (RDP)</p></li>
+<li><p>3838 (Shiny)</p></li>
+<li><p>8000 (JupyterHub)</p></li>
+<li><p>8088 (Superset)</p></li>
+<li><p>8787 (Rstudio)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the account there can be already predefined security groups contain these port. If not, you have to create it following <a class="reference external" href="https://creodias.docs.cloudferro.com/en/latest/cloud/How-to-use-Security-Groups-in-Horizon-on-Creodias.html">these instructions</a></p>
+</div>
+<p><img alt="Security Groups" src="_images/security-groups.png" /></p>
+<ol class="arabic simple" start="7">
+<li><p>Finally you select or create an SSH key pair that will be used to connect to the instance for the first time.</p></li>
+</ol>
+<p><img alt="SSH key" src="_images/key-pair.png" /></p>
+<ol class="arabic simple" start="8">
+<li><p>Launch the instance and wait until it will be running</p></li>
+<li><p>Create and associate an external IP following <a class="reference external" href="https://creodias.docs.cloudferro.com/en/latest/networking/How-to-Add-or-Remove-Floating-IPs-to-your-VM-on-Creodias.html">these steps</a></p></li>
+</ol>
+<p><img alt="Add IP" src="_images/add-ip.png" /></p>
+<ol class="arabic simple" start="10">
+<li><p>Then you can access your instance with an SSH client using the key from step 7 and the username is <em><strong>eouser</strong></em>. Then the first step will be to create a password for the default user (eouser). After creating the password the connection will be automatically closed.</p></li>
+</ol>
+<p><img alt="Initialize password" src="_images/pwd-change.png" /></p>
+<ol class="arabic" start="11">
+<li><p>To enable RDP and add the additional services you have to run the following shell script: <a class="reference download internal" download="" href="_downloads/f22e38114b583c901cc246cf7836aca6/add_services_nogpu.sh"><span class="xref download myst">add_services_nogpu.sh</span></a>
+For that, you have to upload/copy (e.g. WinSCP) to the server. Make it executable and run in a terminal.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">add_services_nogpu</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">add_services_nogpu</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Before you run the script replace in the script on row 136 the Superset admin password <code class="docutils literal notranslate"><span class="pre">&lt;your_superset_password&gt;</span></code> with your own password.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The script runs and install all the services and libraries. The script restarts several times the server during the installation process and can last up to 1 hour.
+You can check the installation status with <code class="docutils literal notranslate"><span class="pre">more</span> <span class="pre">~/.service_install_status</span></code> in the terminal. When it finishes the status will be <code class="docutils literal notranslate"><span class="pre">everything</span> <span class="pre">went</span> <span class="pre">well</span></code>.<br />
+<img alt="Instal finished" src="_images/install-finished.png" /></p>
 </div>
 </li>
 </ol>
-<p>After login usually the first step is to create a password for the default user (<em><strong>eouser</strong></em>). After creating the password the connection will be automatically closed.</p>
-<p><img alt="Initialize password" src="_images/pwd-change.png" /></p>
-<p>If the user not prompted directly to change password, it can be done manually by the following command:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{code-block} 
-sudo passwd eouser
-```
-</pre></div>
-</div>
-<ol class="arabic simple" start="7">
-<li><p><em>After the setup of the password the server is ready to use!</em></p></li>
-</ol>
-</section>
 <section id="accessing-the-services">
 <h2>Accessing the services<a class="headerlink" href="#accessing-the-services" title="Permalink to this heading">#</a></h2>
-<section id="rdp">
-<h3>RDP<a class="headerlink" href="#rdp" title="Permalink to this heading">#</a></h3>
-<p>The service is available in standard RDP clients at the <code class="docutils literal notranslate"><span class="pre">&lt;external/public</span> <span class="pre">IP&gt;:3389</span></code> retrieved under step 5 above.  In case the participant is behind a proxy, the connection can be tunneled from the <code class="docutils literal notranslate"><span class="pre">&lt;internal</span> <span class="pre">IP:3389&gt;</span></code> through SSH to the <code class="docutils literal notranslate"><span class="pre">&lt;localhost&gt;:xxxx</span></code> and connect to the localhost port with the RDP client.</p>
-</section>
-<section id="shiny">
-<h3>Shiny<a class="headerlink" href="#shiny" title="Permalink to this heading">#</a></h3>
-<p>The service is available in a browser under the <code class="docutils literal notranslate"><span class="pre">&lt;external/public</span> <span class="pre">IP:3838&gt;</span></code> retrieved under step 5 above.</p>
-</section>
-<section id="jupyterhub">
-<h3>JupyterHub<a class="headerlink" href="#jupyterhub" title="Permalink to this heading">#</a></h3>
-<p>The service is available in a browser under the <code class="docutils literal notranslate"><span class="pre">&lt;external/public</span> <span class="pre">IP:8000&gt;</span></code> retrieved under step 5 above. The username is <code class="docutils literal notranslate"><span class="pre">eouser</span></code> and password what is defined under step 6 above.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In case after the first lunch the user receive the error that the repository is read only, the user should first click on the highlighted left file browser panel first and then the read-only protection disappears.
-<img alt="Jupyter read only error" src="_images/jupyter-error-highlighted.png" /></p>
-</div>
-</section>
-<section id="apache-superset">
-<h3>Apache Superset<a class="headerlink" href="#apache-superset" title="Permalink to this heading">#</a></h3>
-<p>The service is available in a browser under the <code class="docutils literal notranslate"><span class="pre">&lt;external/public</span> <span class="pre">IP:8088&gt;</span></code> retrieved under step 5 above. The username is <code class="docutils literal notranslate"><span class="pre">eouser</span></code> and password is <code class="docutils literal notranslate"><span class="pre">eubdHack25</span></code>.</p>
-</section>
-<section id="rstudio">
-<h3>Rstudio<a class="headerlink" href="#rstudio" title="Permalink to this heading">#</a></h3>
-<p>The service is available in a browser under the <code class="docutils literal notranslate"><span class="pre">&lt;external/public</span> <span class="pre">IP:8787&gt;</span></code> retrieved under step 5 above. The username is <code class="docutils literal notranslate"><span class="pre">eouser</span></code> and password what is defined under step 6 above.</p>
-</section>
+<p><strong>RDP</strong></p>
+<p>The service is available under the external IP:3389 created under step 9 above in standard RDP clients.  In case you are behind proxy you can tunnel the internal IP:3389 through SSH to your localhost and connect to your localhost port with the RDP client.</p>
+<p><strong>Shiny</strong></p>
+<p>The service is available in a browser under the external  IP:3838 created under step 9 above.</p>
+<p><strong>JupyterHub</strong></p>
+<p>The service is available in a browser under the external IP:8000 created under step 9 above. The username is <code class="docutils literal notranslate"><span class="pre">eouser</span></code> and password what is defined under step 10.</p>
+<p><strong>Apache Superset</strong></p>
+<p>The service is available in a browser under the external IP:8088 created under step 9 above. The username is <code class="docutils literal notranslate"><span class="pre">eouser</span></code> and password what is defined under step 11 defined in the <code class="docutils literal notranslate"><span class="pre">add_services_nogpu.sh</span></code>.</p>
+<p><strong>Rstudio</strong></p>
+<p>The service is available in a browser under the external IP:8787 created under step 9 above. The username is <code class="docutils literal notranslate"><span class="pre">eouser</span></code> and password what is defined under step 10.</p>
 </section>
 </section>
 
@@ -513,15 +497,6 @@ sudo passwd eouser
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="CDSE.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">The Copernicus Data Space Ecosystem (CDSE)</p>
-      </div>
-    </a>
 </div>
                 </footer>
               
@@ -537,15 +512,7 @@ sudo passwd eouser
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-at-the-hackathon">First steps at the hackathon</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-services">Accessing the services</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rdp">RDP</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shiny">Shiny</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyterhub">JupyterHub</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apache-superset">Apache Superset</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rstudio">Rstudio</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-services">Accessing the services</a></li>
 </ul>
   </nav></div>
 
