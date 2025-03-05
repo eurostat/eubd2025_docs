@@ -45,7 +45,7 @@ The participants from the Dashboard can terminate the preconfigured server and c
 
     :::{Important}
     The default username is ***eouser***. 
-    :::important
+    :::
 
 After login usually the first step is to create a password for the default user (***eouser***). After creating the password the connection will be automatically closed.
 
@@ -56,7 +56,7 @@ If the user not prompted directly to change password, it can be done manually by
     ```{code-block} 
     sudo passwd eouser
     ```
-7. *After the setup of the password the server is ready to use!*
+7. **After the setup of the password the server is ready to use!**
 
 
  
