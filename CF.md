@@ -53,9 +53,7 @@ After login usually the first step is to create a password for the default user 
 
 If the user not prompted directly to change password, it can be done manually by the following command:
 
-```
-sudo passwd eouser
-```
+: sudo passwd eouser
 
 7. **After the setup of the password the server is ready to use!**
 
